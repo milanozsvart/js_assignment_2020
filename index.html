@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <title>SET | Kezdőlap</title>
+</head>
+<body>
+        <nav>
+            <button id="rules" class="btn">Játékszabály</button>
+        </nav>
+    <main>
+        <div class="rules-toggle">
+            <p>A játék célja hogy 3 kártyából álló SET-eket találjunk meg az asztalra lehelyezett 12 kártyából.</p> 
+            <p>Minden kártyának 4 tulajdonsága van, amik a következők:</p>
+            <ul>
+                <li>FORMA: ovális, hullámos, rombusz </li>
+                <li>SZÍN: piros, zöld, lila</li>
+                <li>SZÁM: 1, 2 vagy 3 forma</li>
+                <li>TARTALOM: tömör, csíkos, üres (ez csak a plusz feladatokban jelenik meg.)</li>
+            </ul>
+            <p>Egy SET 3 kártyából áll, amiben minden jellemzőt külön megvizsgálva, azoknak</p>
+            <ul>
+                <li>vagy minden kártyán azonosnak,</li>
+                <li>vagy minden kártyán különbözőnek kell lennie.</li>
+            </ul>
+            <p>Ennek a szabálynak MINDEN tulajdonság esetében meg kell felelnie a kiválasztott három lapnak.</p> 
+            <p>Más szavakkal: a forma vagy azononos mindhárom kártyán, vagy mindegyiken más; a szín vagy azonos mindhárom kártyán, vagy mindegyiken különböző, stb... </p>
+            <p>Fordítva: ha a lapokon egy tulajdonságot vizsgálva 2 azonos és 1 különböző típus látható, akkor az nem SET.</p> 
+            <p>Például, ha 2 lap piros, 1 pedig lila, akkor az nem SET.</p>
+        </div>
+        <div class="main-title">
+            <h1>SET</h1>
+            <div class="setting">
+                <h2>Játék nehézsége</h2>
+                <div class="choose-difficulty-radio">
+                    <button class="difficulty btn" id="beginner">Kezdö</button>
+                    <button class="difficulty btn selected" id="advanced">Haladó</button>
+                </div>
+                <h2>Játékmód</h2>
+                <div class="choose-gamemode-radio">
+                    <button class="gamemode btn" id="sandbox">Gyakorló</button>
+                    <button class="gamemode btn" id="race">Verseny</button>
+                </div>
+                <h2>Játékosok száma</h2>
+                <input type="number" name="num-of-players" id="num-of-players" min="1" max="10" value="1">
+                <button class="btn big-btn" id="next">TOVÁBB</button>
+            </div>
+        </div>
+        <div class="second-title">
+            <h2>Segítségek</h2>
+            <p>(Verseny módban nem elérhetöek)</p>
+            <div class="help">
+                Van-e SET a leosztásban? A gép válaszol <input type="checkbox" id="is-there-set" class="help-check">
+            </div>
+            <div class="help">
+                A gép rámutat egy SET-re <input type="checkbox" id="points-at-set" class="help-check">
+            </div>
+            <div class="help">
+                Automatikus kiegészítés, ha nincs SET a leosztásban <input type="checkbox" id="automate-card" class="help-check">
+            </div>
+            <h2>Játékosok neve</h2>
+            <div class="player-names">
+
+            </div>
+            <button class="btn big-btn" id="start">START</button>
+        </div>
+        <div class="game">
+            <div class="player-container">
+
+            </div>
+            <div class="hints-container">
+                <button class="btn hint" id="isthereset">Van SET?</button>
+                <button class="btn hint" id="whereisset">Hol van SET?</button>
+                <span id="hint-span"></span>
+            </div>
+            <div class="table-of-game">
+                <div class="card" id="1-card"></div>
+                <div class="card"  id="2-card"></div>
+                <div class="card"  id="3-card"></div>
+                <div class="card"  id="4-card"></div>
+                <div class="card"  id="5-card"></div>
+                <div class="card"  id="6-card"></div>
+                <div class="card"  id="7-card"></div>
+                <div class="card"  id="8-card"></div>
+                <div class="card"  id="9-card"></div>
+                <div class="card"  id="10-card"></div>
+                <div class="card"  id="11-card"></div>
+                <div class="card"  id="12-card"></div>
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
